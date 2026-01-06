@@ -2,119 +2,254 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bravo | Personal Website</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bravo Wyatt Learning Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      margin: 0;
-      padding: 0;
+    /* General Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+    html { scroll-behavior: smooth; }
+    body { background: #f5f5f5; color: #333; line-height: 1.6; }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+      padding: 0 20px;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeSlide 1s forwards;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeSlide 1s forwards;
+      animation-delay: 0.5s;
+    }
+    .hero button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      background: #fff;
+      color: #2575fc;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      opacity: 0;
+      animation: fadeSlide 1s forwards;
+      animation-delay: 1s;
+    }
+    .hero button:hover {
+      transform: scale(1.1);
+      background: #f0f0f0;
     }
 
-    .container {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
+    @keyframes fadeSlide {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(20px); }
+    }
+
+    /* Typing Effect */
+    .typing {
+      border-right: 2px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      font-weight: 700;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 80px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      background: #fff;
+    }
+    .feature-card {
+      background: #f0f0f0;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      width: 250px;
+      text-align: center;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+    .feature-card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .feature-card h3 { margin-bottom: 10px; }
+    .feature-card p { font-size: 0.9rem; }
+
+    /* Courses Section */
+    .courses {
+      background: #e7f0ff;
+      padding: 80px 20px;
       text-align: center;
     }
-
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      margin: 10px 0;
-      color: #222;
-    }
-
-    h2 {
-      margin-top: 25px;
-      color: #444;
-    }
-
-    p {
-      color: #555;
-      line-height: 1.6;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      background: #f4f4f4;
-      margin: 8px 0;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    .social-links {
-      margin-top: 20px;
-    }
-
-    .social-links a {
+    .courses h2 { margin-bottom: 40px; }
+    .course-card {
+      background: white;
       display: inline-block;
+      padding: 20px;
       margin: 10px;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
+      border-radius: 12px;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover {
+      transform: scale(1.05);
     }
 
-    .whatsapp { background: #25D366; }
-    .instagram { background: #E1306C; }
+    /* Testimonials Section */
+    .testimonials {
+      padding: 80px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .testimonial-card {
+      display: inline-block;
+      background: #f0f0f0;
+      padding: 30px;
+      margin: 10px;
+      border-radius: 12px;
+      width: 250px;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+    .testimonial-card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #777;
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #2575fc;
+      color: white;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="container">
-
-    <!-- Replace this with your real photo URL -->
-    <img src="https://via.placeholder.com/150" alt="Bravo">
-
-    <h1>Hi, I'm Bravo 👋</h1>
-    <p>I’m the founder of a learning platform designed to help students and lifelong learners grow, achieve, and thrive. Knowledge is power, and I believe everyone can level up—one step, one lesson, one breakthrough at a time. Let’s turn curiosity into action and dreams into results.</p>
-
-    <h2>About Me</h2>
-    <p>I’m learning web development and building skills that will help me grow personally and professionally.</p>
-
-    <h2>My Interests</h2>
-    <ul>
-      <li>Web Development</li>
-      <li>Entrepreneurship</li>
-      <li>Technology</li>
-      <li>Personal Growth</li>
-    </ul>
-
-    <h2>Contact</h2>
-    <p>Email: yourname@email.com</p>
-
-    <h2>Find Me Online</h2>
-    <div class="social-links">
-      <a href="https://wa.me/254790367352" target="_blank" class="whatsapp">WhatsApp</a>
-      <a href="https://instagram.com/br.avo3113" target="_blank" class="instagram">Instagram</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div id="particles-js"></div>
+    <div class="hero-content">
+      <h1 class="typing" id="typing"></h1>
+      <p>Empowering learners to grow, achieve, and thrive.</p>
+      <button>Get Started</button>
     </div>
+  </section>
 
-    <div class="footer">© 2026 Bravo</div>
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card"> 
+      <h3>Interactive Lessons</h3>
+      <p>Engage with lessons that make learning fun and effective.</p>
+    </div>
+    <div class="feature-card"> 
+      <h3>Expert Guidance</h3>
+      <p>Learn from experienced mentors and educators worldwide.</p>
+    </div>
+    <div class="feature-card"> 
+      <h3>Track Progress</h3>
+      <p>Monitor your learning journey and celebrate milestones.</p>
+    </div>
+  </section>
 
-  </div>
+  <!-- Courses Section -->
+  <section class="courses">
+    <h2>Our Courses</h2>
+    <div class="course-card">Web Development</div>
+    <div class="course-card">Data Science</div>
+    <div class="course-card">Personal Growth</div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Learners Say</h2>
+    <div class="testimonial-card">"This platform changed the way I learn!"</div>
+    <div class="testimonial-card">"Interactive lessons make it so easy to follow."</div>
+    <div class="testimonial-card">"I can track my progress and stay motivated."</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Bravo Wyatt Learning Platform. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    // Initialize Particles.js
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {"value": 80},
+        "size": {"value": 3},
+        "move": {"speed": 2},
+        "line_linked": {"enable": true, "opacity": 0.2}
+      }
+    });
+
+    // Typing Effect
+    const text = "Unlock Your Potential";
+    const typingEl = document.getElementById("typing");
+    let index = 0;
+    function type() {
+      if(index < text.length) {
+        typingEl.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, 150);
+      }
+    }
+    type();
+
+    // Scroll Animation
+    const featureCards = document.querySelectorAll('.feature-card');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+    function checkScroll() {
+      const triggerBottom = window.innerHeight / 5 * 4;
+      featureCards.forEach(card => {
+        if(card.getBoundingClientRect().top < triggerBottom) card.classList.add('show');
+      });
+      testimonialCards.forEach(card => {
+        if(card.getBoundingClientRect().top < triggerBottom) card.classList.add('show');
+      });
+    }
+
+    window.addEventListener('scroll', checkScroll);
+    window.addEventListener('load', checkScroll);
+  </script>
 
 </body>
 </html>
