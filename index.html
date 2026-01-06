@@ -2,51 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bravin | Personal Website</title>
+  <title>Bravin | Personal Brand</title>
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f3f4f6;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .profile-pic {
-      width: 170px;
-      height: 170px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #e5e7eb;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      margin: 10px 0;
-      color: #111827;
-    }
-
-    h2 {
-      margin-top: 35px;
+      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
       color: #1f2937;
     }
 
-    p {
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    header h1 {
+      margin: 20px 0 10px;
+      font-size: 32px;
+    }
+
+    header p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 17px;
       color: #4b5563;
-      line-height: 1.7;
-      font-size: 16px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      animation: slideUp 1s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
     ul {
@@ -54,134 +66,177 @@
       padding: 0;
     }
 
-    li {
+    ul li {
       background: #f9fafb;
       margin: 10px 0;
-      padding: 14px;
-      border-radius: 8px;
-      color: #374151;
+      padding: 15px;
+      border-radius: 10px;
       font-weight: 500;
     }
 
-    /* Buttons */
     .buttons {
+      text-align: center;
       margin-top: 25px;
     }
 
     .btn {
       display: inline-block;
       margin: 10px;
-      padding: 14px 28px;
-      border-radius: 10px;
-      color: #ffffff;
+      padding: 15px 30px;
+      border-radius: 30px;
       text-decoration: none;
+      color: white;
       font-weight: bold;
-      transition: transform 0.2s ease;
-    }
-
-    .btn i {
-      margin-right: 8px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     .btn:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
+      opacity: 0.9;
     }
 
     .whatsapp { background: #25D366; }
     .instagram { background: #E1306C; }
     .cv { background: #111827; }
 
-    /* Sections */
-    .card {
-      background: #f9fafb;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 20px;
+    .btn i {
+      margin-right: 8px;
     }
 
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      font-size: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #111827;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
       color: #6b7280;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
-
-    <!-- PROFILE -->
-    <img src="https://via.placeholder.com/170" alt="Bravin" class="profile-pic">
-    <h1>Hi, I'm Bravin 👋</h1>
+  <!-- HERO -->
+  <header>
+    <img src="https://via.placeholder.com/180" alt="Bravin">
+    <h1>Bravin</h1>
     <p>
-      A university student, aspiring entrepreneur, and tech enthusiast.
-      I believe in growth through consistency, discipline, and purpose.
+      University student • Tech enthusiast • Entrepreneurial thinker •
+      Building ideas with purpose, discipline, and consistency.
     </p>
 
-    <!-- ABOUT -->
-    <h2>About Me</h2>
-    <div class="card">
-      <p>
-        I am passionate about technology, business, and personal development.
-        I’m currently learning web development and building ideas that can create
-        real impact in people’s lives.
-      </p>
-    </div>
-
-    <!-- INTERESTS -->
-    <h2>My Interests</h2>
-    <ul>
-      <li>Web Development & Technology</li>
-      <li>Entrepreneurship & Startups</li>
-      <li>Personal Growth & Leadership</li>
-      <li>Creative Thinking & Innovation</li>
-    </ul>
-
-    <!-- NEXUS -->
-    <h2>Nexus</h2>
-    <div class="card">
-      <p>
-        <strong>Nexus</strong> is an idea-driven initiative focused on connecting people,
-        building meaningful relationships, and creating value through smart systems
-        and collaboration.
-      </p>
-    </div>
-
-    <!-- PORTFOLIO -->
-    <h2>Portfolio</h2>
-    <div class="card">
-      <ul>
-        <li>✔ Personal Website (This site)</li>
-        <li>✔ GitHub Pages Deployment</li>
-        <li>✔ Learning HTML & CSS</li>
-        <li>✔ Future Business Platforms (Nexus)</li>
-      </ul>
-    </div>
-
-    <!-- CONTACT -->
-    <h2>Connect With Me</h2>
-    <p>I’m open to conversations, collaboration, and opportunities.</p>
-
     <div class="buttons">
-      <a href="https://wa.me/254790367352" target="_blank" class="btn whatsapp">
+      <a href="https://wa.me/254712345678" class="btn whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
-
-      <a href="https://instagram.com/braavos12.3" target="_blank" class="btn instagram">
+      <a href="https://instagram.com/your_instagram" class="btn instagram" target="_blank">
         <i class="fab fa-instagram"></i> Instagram
       </a>
-
       <a href="cv.pdf" class="btn cv" download>
         <i class="fas fa-download"></i> Download CV
       </a>
     </div>
+  </header>
 
-    <div class="footer">
-      © 2026 Bravin • Built with purpose & consistency
-    </div>
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p>
+      I’m Bravin, a university student passionate about technology, business,
+      and personal growth. I believe in consistency, smart work, and building
+      systems that create real impact.
+    </p>
+  </section>
 
-  </div>
+  <!-- INTERESTS -->
+  <section>
+    <h2>What I’m Into</h2>
+    <ul>
+      <li>Web Development & Technology</li>
+      <li>Entrepreneurship & Startups</li>
+      <li>Leadership & Self Growth</li>
+      <li>Creative Problem Solving</li>
+    </ul>
+  </section>
+
+  <!-- NEXUS -->
+  <section>
+    <h2>Nexus</h2>
+    <p>
+      <strong>Nexus</strong> is a vision-driven initiative focused on connecting
+      people, building trust, and creating meaningful relationships through
+      smart platforms and collaboration.
+    </p>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section>
+    <h2>Portfolio</h2>
+    <ul>
+      <li>Personal Website (GitHub Pages)</li>
+      <li>HTML & CSS Projects</li>
+      <li>Nexus Business Concept</li>
+      <li>Digital Branding & Online Presence</li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2026 Bravin • Built with vision & consistency
+  </footer>
 
 </body>
 </html>
