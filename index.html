@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Bravin | Personal Website</title>
 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
       margin: 0;
@@ -12,18 +15,18 @@
     }
 
     .container {
-      max-width: 720px;
+      max-width: 800px;
       margin: 40px auto;
       background: #ffffff;
-      padding: 35px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       text-align: center;
     }
 
     .profile-pic {
-      width: 160px;
-      height: 160px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #e5e7eb;
@@ -36,7 +39,7 @@
     }
 
     h2 {
-      margin-top: 30px;
+      margin-top: 35px;
       color: #1f2937;
     }
 
@@ -53,42 +56,51 @@
 
     li {
       background: #f9fafb;
-      margin: 8px 0;
-      padding: 12px;
-      border-radius: 6px;
+      margin: 10px 0;
+      padding: 14px;
+      border-radius: 8px;
       color: #374151;
       font-weight: 500;
     }
 
-    .social-links {
+    /* Buttons */
+    .buttons {
       margin-top: 25px;
     }
 
-    .social-links a {
+    .btn {
       display: inline-block;
       margin: 10px;
-      padding: 14px 26px;
-      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 10px;
       color: #ffffff;
+      text-decoration: none;
       font-weight: bold;
-      border-radius: 8px;
       transition: transform 0.2s ease;
     }
 
-    .social-links a:hover {
+    .btn i {
+      margin-right: 8px;
+    }
+
+    .btn:hover {
       transform: scale(1.05);
     }
 
-    .whatsapp {
-      background: #25D366;
-    }
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+    .cv { background: #111827; }
 
-    .instagram {
-      background: #E1306C;
+    /* Sections */
+    .card {
+      background: #f9fafb;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 20px;
     }
 
     .footer {
-      margin-top: 35px;
+      margin-top: 40px;
       font-size: 14px;
       color: #6b7280;
     }
@@ -99,49 +111,74 @@
 
   <div class="container">
 
-    <!-- Replace with your real photo -->
-    <img src="https://via.placeholder.com/160" alt="Bravin" class="profile-pic">
-
+    <!-- PROFILE -->
+    <img src="https://via.placeholder.com/170" alt="Bravin" class="profile-pic">
     <h1>Hi, I'm Bravin 👋</h1>
     <p>
-      A university student with a strong interest in technology, business,
-      and personal growth.
+      A university student, aspiring entrepreneur, and tech enthusiast.
+      I believe in growth through consistency, discipline, and purpose.
     </p>
 
+    <!-- ABOUT -->
     <h2>About Me</h2>
-    <p>
-      I believe in consistency, discipline, and continuous learning.
-      I’m developing skills in web development and entrepreneurship
-      while working toward a meaningful and impactful future.
-    </p>
+    <div class="card">
+      <p>
+        I am passionate about technology, business, and personal development.
+        I’m currently learning web development and building ideas that can create
+        real impact in people’s lives.
+      </p>
+    </div>
 
+    <!-- INTERESTS -->
     <h2>My Interests</h2>
     <ul>
       <li>Web Development & Technology</li>
-      <li>Business & Entrepreneurship</li>
-      <li>Personal Growth</li>
-      <li>Creative Thinking</li>
+      <li>Entrepreneurship & Startups</li>
+      <li>Personal Growth & Leadership</li>
+      <li>Creative Thinking & Innovation</li>
     </ul>
 
-    <h2>Connect With Me</h2>
-    <p>
-      I’m open to conversations, collaborations, and new opportunities.
-    </p>
+    <!-- NEXUS -->
+    <h2>Nexus</h2>
+    <div class="card">
+      <p>
+        <strong>Nexus</strong> is an idea-driven initiative focused on connecting people,
+        building meaningful relationships, and creating value through smart systems
+        and collaboration.
+      </p>
+    </div>
 
-    <div class="social-links">
-      <!-- WhatsApp -->
-      <a href="https://wa.me/254790367352" target="_blank" class="whatsapp">
-        Chat on WhatsApp
+    <!-- PORTFOLIO -->
+    <h2>Portfolio</h2>
+    <div class="card">
+      <ul>
+        <li>✔ Personal Website (This site)</li>
+        <li>✔ GitHub Pages Deployment</li>
+        <li>✔ Learning HTML & CSS</li>
+        <li>✔ Future Business Platforms (Nexus)</li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <h2>Connect With Me</h2>
+    <p>I’m open to conversations, collaboration, and opportunities.</p>
+
+    <div class="buttons">
+      <a href="https://wa.me/254790367352" target="_blank" class="btn whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
 
-      <!-- Instagram -->
-      <a href="https://instagram.com/braavos12.3" target="_blank" class="instagram">
-        Instagram
+      <a href="https://instagram.com/braavos12.3" target="_blank" class="btn instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+
+      <a href="cv.pdf" class="btn cv" download>
+        <i class="fas fa-download"></i> Download CV
       </a>
     </div>
 
     <div class="footer">
-      © 2026 Bravin W• Personal Website
+      © 2026 Bravin • Built with purpose & consistency
     </div>
 
   </div>
