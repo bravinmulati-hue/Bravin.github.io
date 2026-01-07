@@ -39,7 +39,12 @@ gtag('config', 'G-XXXXXXX');
   gap: 30px;
   margin-top: 20px;
 }
-
+.typing {
+  font-size: 22px;
+  margin-top: 15px;
+  color: var(--accent);
+  min-height: 30px;
+}
 .icon {
   display: flex;
   align-items: center;
@@ -257,6 +262,7 @@ footer {
 <section id="home" class="hero fade">
   <div>
     <h1>Hello, I’m <span>Bravin</span></h1>
+    <h3 class="typing"></h3>
     <p>
       I’m a student with ambitions to learn and grow.  
       Founder of <strong>Nexus</strong>, a company connecting people globally.  
@@ -283,6 +289,16 @@ footer {
 </section>
 
 <!-- SERVICES -->
+  <section class="fade">
+  <h2>Tech Stack</h2>
+
+  <div class="services">
+    <div class="card">🌐 HTML</div>
+    <div class="card">🎨 CSS</div>
+    <div class="card">⚡ JavaScript</div>
+    <div class="card">🐙 GitHub</div>
+  </div>
+  </section>
 <section id="services" class="fade">
   <h2>What I Do</h2>
   <div class="services">
@@ -292,7 +308,27 @@ footer {
     <div class="card">🌍 Global Digital Networking</div>
   </div>
 </section>
+<section id="projects" class="fade">
+  <h2>Projects</h2>
 
+  <div class="services">
+    <div class="card">
+      <h3>Nexus Website</h3>
+      <p>Official website for Nexus, built with modern UI, animations, and GitHub Pages.</p>
+    </div>
+
+    <div class="card">
+      <h3>Personal Portfolio</h3>
+      <p>A wide, animated portfolio showcasing my skills, vision, and projects.</p>
+    </div>
+
+    <div class="card">
+      <h3>Practice Web Apps</h3>
+      <p>Small web projects built to improve my skills in JavaScript and design.</p>
+    </div>
+  </div>
+</section>
+  
 <!-- CONTACT -->
 <section id="contact" class="fade">
   <h2>Contact Me</h2>
@@ -341,6 +377,18 @@ function toggleMode() {
   document.body.classList.toggle('light');
 }
 </script>
+  const text = "Building digital solutions that connect the world.";
+let i = 0;
+const typingEl = document.querySelector(".typing");
+
+function typeText() {
+  if (i < text.length) {
+    typingEl.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeText, 70);
+  }
+}
+typeText();
 
 </body>
 </html>
