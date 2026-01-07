@@ -1,302 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<<header class="hero">>
-  <meta charset="UTF-8">
-  <title>Bravin | Personal Brand</title>
+<head>
+<!-- ================= BASIC ================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXUS | Bravin – Connecting People Globally</title>
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- ================= SEO ================= -->
+<meta name="description" content="Nexus is a global connection platform founded by Bravin, a student passionate about web development, software design, and technology growth.">
+<meta name="keywords" content="Nexus, Bravin, Web Development, Software Design, Student Developer, Technology, Global Network">
+<meta name="author" content="Bravin">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      /* === ANIMATIONS === */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+<!-- ================= SOCIAL PREVIEW ================= -->
+<meta property="og:title" content="NEXUS | Bravin">
+<meta property="og:description" content="Connecting people globally through technology and innovation.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="image/profile.jpg">
+
+<!-- ================= ANALYTICS (READY) ================= -->
+<!-- Replace G-XXXXXXX with your Google Analytics ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX');
+</script>
+
+<style>
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+body.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #020617;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
 }
-    }
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
-      color: #1f2937;
-      <a href="cv.pdf" target="_blank">
-  Download my CV
-</a>
-  <img src="profile.jpg" alt="My photo" width="200">
-      <img 
-  src="images/profile.jpg"
-  alt="Profile picture"
-  style="
-    width:180px;
-    height:180px;
-    object-fit:cover;
-    border-radius:50%;
-  ">
-    }
+/* ================= HEADER ================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: var(--card);
+}
 
-    header {
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeIn 1.2s ease;
-    }
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-size: 26px;
+  font-weight: bold;
+}
 
-    header img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 5px solid white;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--text);
+}
 
-    header h1 {
-      margin: 20px 0 10px;
-      font-size: 32px;
-    }
+nav a:hover {
+  color: var(--accent);
+}
 
-    header p {
-      max-width: 1000px;
-      margin: auto;
-      font-size: 17px;
-      color: #4b5563;
-    }
+.toggle {
+  cursor: pointer;
+  margin-left: 30px;
+}
 
-    section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 30px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      animation: slideUp 1s ease;
-    }
+/* ================= SECTIONS ================= */
+section {
+  max-width: 1600px;
+  margin: auto;
+  padding: 100px 80px;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+.hero {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+.hero img {
+  width: 380px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
 
-    ul li {
-      background: #f9fafb;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 10px;
-      font-weight: 500;
-    }
+h1 {
+  font-size: 48px;
+}
 
-    .buttons {
-      text-align: center;
-      margin-top: 25px;
-    }
+h2 {
+  font-size: 36px;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
+span {
+  color: var(--accent);
+}
 
-    .btn:hover {
-      transform: scale(1.07);
-      opacity: 0.9;
-    }
+p {
+  line-height: 1.7;
+  max-width: 650px;
+}
 
-    .whatsapp { background: #25D366; }
-    .instagram { background: #E1306C; }
-    .cv { background: #111827; }
+.buttons a {
+  display: inline-block;
+  margin: 20px 15px 0 0;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
 
-    .btn i {
-      margin-right: 8px;
-    }
+.btn {
+  background: var(--accent);
+  color: #020617;
+}
 
-    form {
-      max-width: 500px;
-      margin: auto;
-    }
+.btn-outline {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
 
-    input, textarea {
-      width: 100%;
-      padding: 14px;
-      margin: 10px 0;
-      border-radius: 10px;
-      border: 1px solid #d1d5db;
-      font-size: 15px;
-    }
+/* ================= SERVICES ================= */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      background: #111827;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
 
-    button:hover {
-      opacity: 0.9;
-    }
+.card:hover {
+  transform: translateY(-10px);
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #6b7280;
-      font-size: 14px;
-    }
+/* ================= CONTACT ================= */
+.socials a {
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--accent);
+}
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: var(--card);
+}
 
-    @keyframes slideUp {
-      from {
-        transform: translateY(40px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  </style>
+/* ================= ANIMATIONS ================= */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  header {
+    padding: 20px 30px;
+  }
+  section {
+    padding: 70px 30px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header>
-    <img src="https://<div style="
-  width:180px;
-  height:180px;
-  margin: auto;
-  border-radius: 50%;
-  background: #111827;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 48px;
-  font-weight: bold;
-">
-  B
-</div>" alt="Bravin">
-    <h1>Bravin</h1>
+<header>
+  <div class="logo">
+    <!-- Nexus SVG Logo -->
+    <svg width="32" height="32" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="45" stroke="#38bdf8" stroke-width="8"/>
+      <path d="M30 65 L50 35 L70 65" stroke="#38bdf8" stroke-width="8" fill="none"/>
+    </svg>
+    NEXUS
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleMode()">🌙</span>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="hero fade">
+  <div>
+    <h1>Hello, I’m <span>Bravin</span></h1>
     <p>
-      University student • Tech enthusiast • Entrepreneurial thinker •
-      Building ideas with purpose, discipline, and consistency.
+      I’m a student with ambitions to learn and grow.  
+      Founder of <strong>Nexus</strong>, a company connecting people globally.  
+      Passionate about web development, software design, and running programs.
     </p>
 
     <div class="buttons">
-      <a href="https://wa.me/254790367352" class="btn whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp
-      </a>
-      <a href="https://instagram.com/braavos12.3" class="btn instagram" target="_blank">
-        <i class="fab fa-instagram"></i> Instagram
-      </a>
-      <a href="cv.pdf" class="btn cv" download>
-        <i class="fas fa-download"></i> Download CV
-      </a>
+      <a href="cv/bravin-cv.pdf" download class="btn">Download CV</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
     </div>
-  </header>
+  </div>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I’m Bravin, a student passionate about technology, business,
-      and personal growth. I believe in consistency, smart work, and building
-      systems that create real impact.
-    </p>
-  </section>
+  <img src="image/profile.jpg" alt="Bravin">
+</section>
 
-  <!-- INTERESTS -->
-  <section>
-    <h2>What I’m Into</h2>
-    <ul>
-      <li>Web Development & Technology</li>
-      <li>Entrepreneurship & Startups</li>
-      <li>Leadership & Self Growth</li>
-      <li>Creative Problem Solving</li>
-    </ul>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="fade">
+  <h2>About Me</h2>
+  <p>
+    Nexus represents growth, connection, and innovation.
+    My goal is to build technology that brings people together
+    while continuously learning and expanding my skills.
+  </p>
+</section>
 
-  <!-- NEXUS -->
-  <section>
-    <h2>Nexus</h2>
-    <p>
-      <strong>Nexus</strong> is a vision-driven initiative focused on connecting
-      people, building trust, and creating meaningful relationships through
-      smart platforms and collaboration.
-    </p>
-  </section>
+<!-- SERVICES -->
+<section id="services" class="fade">
+  <h2>What I Do</h2>
+  <div class="services">
+    <div class="card">🌐 Web Development</div>
+    <div class="card">💻 Software Design</div>
+    <div class="card">🚀 Program & Project Execution</div>
+    <div class="card">🌍 Global Digital Networking</div>
+  </div>
+</section>
 
-  <!-- PORTFOLIO -->
-  <section>
-    <h2>Portfolio</h2>
-    <ul>
-      <li>Personal Website (GitHub Pages)</li>
-      <li>HTML & CSS Projects</li>
-      <li>Nexus Business Concept</li>
-      <li>Digital Branding & Online Presence</li>
-    </ul>
-  </section>
+<!-- CONTACT -->
+<section id="contact" class="fade">
+  <h2>Contact Me</h2>
+  <div class="socials">
+    <a href="https://wa.me/1234567890" target="_blank">💬 WhatsApp</a>
+    <a href="https://instagram.com/yourusername" target="_blank">📸 Instagram</a>
+  </div>
+</section>
 
-  <!-- CONTACT -->
-  <section>
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Bravin wanjala" required>
-      <input type="email" placeholder="Bravinmulati@gmail.com" required>
-      <textarea rows="4" placeholder="Lets grow together"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<footer>
+  <p>© 2026 NEXUS | Built by Bravin</p>
+</footer>
 
-  <footer>
-    © 2026 Bravin • Built with vision & consistency
-  </footer>
+<script>
+/* Scroll Animations */
+const elements = document.querySelectorAll('.fade');
+const showOnScroll = () => {
+  elements.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add('show');
+    }
+  });
+};
+window.addEventListener('scroll', showOnScroll);
+window.onload = showOnScroll;
+
+/* Dark / Light Mode */
+function toggleMode() {
+  document.body.classList.toggle('light');
+}
+</script>
 
 </body>
 </html>
