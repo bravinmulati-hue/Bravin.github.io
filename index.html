@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- ================= BASIC ================= -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEXUS | Bravin Mulati – Web Developer & Global Digital Platform</title>
 
-<!-- ================= SEO ================= -->
+<!-- SEO -->
 <meta name="description" content="Nexus is Bravin Mulati’s digital platform connecting people worldwide through web development, software design, and technology innovation.">
 <meta name="keywords" content="Nexus, Bravin Mulati, Web Developer, Software Design, Digital Platform, Global Network, Technology Projects">
 <meta name="author" content="Bravin Mulati">
 
-<!-- ================= SOCIAL PREVIEW ================= -->
+<!-- Social Preview -->
 <meta property="og:title" content="NEXUS | Bravin Mulati">
 <meta property="og:description" content="Connecting people globally through technology, innovation, and digital platforms.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="image/profile.jpg">
 
-<!-- ================= ANALYTICS (READY) ================= -->
+<!-- Analytics (replace G-XXXXXXX with your ID) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -27,19 +26,8 @@ gtag('config', 'G-XXXXXXX');
 </script>
 
 <style>
-/* ================= GLOBAL ================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s;
-}
+/* GLOBAL */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
 
 :root {
   --bg: #0f172a;
@@ -48,187 +36,70 @@ body {
   --accent: #38bdf8;
 }
 
-body.light {
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #020617;
-}
+body.light { --bg:#f8fafc; --card:#ffffff; --text:#020617; }
+body { background: var(--bg); color: var(--text); transition: 0.3s; }
 
-/* ================= HEADER ================= */
+/* HEADER */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 80px;
-  background: var(--card);
+  position: sticky; top: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 80px; background: var(--card);
 }
+.logo { display: flex; align-items: center; gap: 10px; color: var(--accent); font-size: 26px; font-weight: bold; }
+nav a { margin-left: 30px; text-decoration: none; color: var(--text); }
+nav a:hover { color: var(--accent); }
+.toggle { cursor: pointer; margin-left: 30px; }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--accent);
-  font-size: 26px;
-  font-weight: bold;
-}
+/* SECTIONS */
+section { max-width: 1600px; margin: auto; padding: 100px 80px; }
+.hero { display: flex; gap: 60px; align-items: center; justify-content: space-between; }
+.hero img { width: 380px; border-radius: 25px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
 
-nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: var(--text);
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-.toggle {
-  cursor: pointer;
-  margin-left: 30px;
-}
-
-/* ================= SECTIONS ================= */
-section {
-  max-width: 1600px;
-  margin: auto;
-  padding: 100px 80px;
-}
-
-.hero {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.hero img {
-  width: 380px;
-  border-radius: 25px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-
-h1 {
-  font-size: 48px;
-}
-
-h2 {
-  font-size: 36px;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
-span {
-  color: var(--accent);
-}
-
-p {
-  line-height: 1.7;
-  max-width: 650px;
-}
+h1 { font-size: 48px; } h2 { font-size: 36px; color: var(--accent); margin-bottom: 20px; } span { color: var(--accent); }
+p { line-height: 1.7; max-width: 650px; }
 
 .buttons a {
-  display: inline-block;
-  margin: 20px 15px 0 0;
-  padding: 14px 26px;
-  border-radius: 10px;
-  font-weight: bold;
-  text-decoration: none;
+  display: inline-block; margin: 20px 15px 0 0; padding: 14px 26px;
+  border-radius: 10px; font-weight: bold; text-decoration: none;
 }
+.btn { background: var(--accent); color: #020617; }
+.btn-outline { border: 2px solid var(--accent); color: var(--accent); }
 
-.btn {
-  background: var(--accent);
-  color: #020617;
-}
+/* SERVICES / CARDS */
+.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+.card { background: var(--card); padding: 30px; border-radius: 18px; transition: 0.3s; }
+.card:hover { transform: translateY(-10px); }
 
-.btn-outline {
-  border: 2px solid var(--accent);
-  color: var(--accent);
-}
-
-/* ================= SERVICES ================= */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: var(--card);
-  padding: 30px;
-  border-radius: 18px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* ================= SOCIAL BUTTONS ================= */
-.socials {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-}
-
+/* SOCIAL BUTTONS */
+.socials { display: flex; gap: 20px; margin-top: 20px; }
 .socials a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
-  border-radius: 12px;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
+  display: flex; align-items: center; gap: 10px; padding: 12px 20px;
+  border-radius: 12px; color: #fff; font-weight: bold; text-decoration: none;
   transition: transform 0.3s, opacity 0.3s;
 }
-
-.socials a:hover {
-  transform: translateY(-3px);
-  opacity: 0.9;
-}
-
-.socials a.whatsapp {
-  background-color: #25D366;
-}
-
+.socials a:hover { transform: translateY(-3px); opacity: 0.9; }
+.socials a.whatsapp { background-color: #25D366; }
 .socials a.instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 40px;
-  background: var(--card);
+/* FLOATING WHATSAPP BUTTON */
+#float-whatsapp {
+  position: fixed; bottom: 25px; right: 25px; z-index: 999;
 }
 
-/* ================= ANIMATIONS ================= */
-.fade {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 1s ease;
-}
+/* FOOTER */
+footer { text-align: center; padding: 40px; background: var(--card); }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* ANIMATIONS */
+.fade { opacity: 0; transform: translateY(40px); transition: 1s ease; }
+.fade.show { opacity: 1; transform: translateY(0); }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  header {
-    padding: 20px 30px;
-  }
-  section {
-    padding: 70px 30px;
-  }
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
+  header { padding: 20px 30px; }
+  section { padding: 70px 30px; }
+  .hero { flex-direction: column; text-align: center; }
 }
 </style>
 </head>
@@ -243,7 +114,6 @@ footer {
     </svg>
     NEXUS
   </div>
-
   <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
@@ -262,13 +132,11 @@ footer {
       I am a web developer and founder of <strong>Nexus</strong>, a digital platform connecting people globally through innovative technology. 
       Passionate about software design, web applications, and building impactful digital solutions.
     </p>
-
     <div class="buttons">
-      <a href="bravin-cv.pdf" download class="btn">Download CV</a>
+      <a href="cv/bravin-cv.pdf" download class="btn">Download CV</a>
       <a href="#contact" class="btn-outline">Contact Me</a>
     </div>
   </div>
-
   <img src="image.jpg" alt="Bravin Mulati – Founder of Nexus">
 </section>
 
@@ -325,14 +193,7 @@ footer {
 <!-- CONTACT -->
 <section id="contact" class="fade">
   <h2>Contact Me</h2>
-  <div class="socials">
-    <a href="https://wa.me/254790367352" target="_blank" class="whatsapp">
-      <svg width="24" height="24" viewBox="0 0 32 32" fill="#fff">
-        <path d="M16 3C9.4 3 4 8.2 4 14.7c0 2.6.9 5.1 2.4 7.1L4 29l7.5-2.3c2 .9 4.2 1.4 6.5 1.4 6.6 0 12-5.2 12-11.7S22.6 3 16 3zm6.6 17.1c-.3.8-1.6 1.5-2.3 1.6-.7.1-1.6.1-2.6-.2-.6-.2-1.4-.5-2.4-1-4.2-1.8-6.9-6-7.1-6.3-.2-.3-1.7-2.3-1.7-4.4 0-2.1 1.1-3.1 1.5-3.5.4-.4.9-.5 1.2-.5.3 0 .6 0 .8 0 .3 0 .6-.1.9.6.3.7 1.1 2.3 1.2 2.5.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.5-.2.9.2.4.9 1.6 1.9 2.6 1.3 1.2 2.4 1.6 2.8 1.8.4.2.6.2.9-.1.3-.3 1-1.1 1.3-1.5.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.6.3.7.4.1.1.1.8-.2 1.6z"/>
-      </svg>
-      WhatsApp
-    </a>
-
+  <div class="socials show">
     <a href="https://instagram.com/braavos12.3" target="_blank" class="instagram">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
         <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 7.3A2.8 2.8 0 1 1 14.8 12 2.8 2.8 0 0 1 12 14.8zM17.2 6.3a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z"/>
@@ -341,6 +202,16 @@ footer {
     </a>
   </div>
 </section>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<div id="float-whatsapp">
+  <a href="https://wa.me/254790367352" target="_blank" class="whatsapp">
+    <svg width="24" height="24" viewBox="0 0 32 32" fill="#fff">
+      <path d="M16 3C9.4 3 4 8.2 4 14.7c0 2.6.9 5.1 2.4 7.1L4 29l7.5-2.3c2 .9 4.2 1.4 6.5 1.4 6.6 0 12-5.2 12-11.7S22.6 3 16 3zm6.6 17.1c-.3.8-1.6 1.5-2.3 1.6-.7.1-1.6.1-2.6-.2-.6-.2-1.4-.5-2.4-1-4.2-1.8-6.9-6-7.1-6.3-.2-.3-1.7-2.3-1.7-4.4 0-2.1 1.1-3.1 1.5-3.5.4-.4.9-.5 1.2-.5.3 0 .6 0 .8 0 .3 0 .6-.1.9.6.3.7 1.1 2.3 1.2 2.5.1.2.1.4 0 .6-.1.2-.2.4-.4.6-.2.2-.4.4-.6.6-.2.2-.4.5-.2.9.2.4.9 1.6 1.9 2.6 1.3 1.2 2.4 1.6 2.8 1.8.4.2.6.2.9-.1.3-.3 1-1.1 1.3-1.5.3-.4.5-.3.9-.2.4.1 2.3 1.1 2.7 1.3.4.2.6.3.7.4.1.1.1.8-.2 1.6z"/>
+    </svg>
+    WhatsApp
+  </a>
+</div>
 
 <footer>
   <p>© 2026 NEXUS | Built by Bravin Mulati</p>
@@ -368,7 +239,6 @@ function toggleMode() {
 const text = "Building digital solutions that connect ideas, people, and innovation.";
 let i = 0;
 const typingEl = document.querySelector(".typing");
-
 function typeText() {
   if (i < text.length) {
     typingEl.textContent += text.charAt(i);
