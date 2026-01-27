@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXUS | Bravin Mulati – Web Developer & Global Digital Platform</title>
 
-<meta name="description" content="Nexus is Bravin Mulati’s digital platform connecting people worldwide through web development, software design, and technology innovation.">
+<title>NEXUS | Bravin Mulati — Web Developer</title>
+
+<meta name="description" content="NEXUS is a digital platform by Bravin Mulati delivering web development, software design, and scalable digital solutions worldwide.">
 
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", sans-serif; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
 
 :root {
   --bg: #0f172a;
@@ -17,47 +23,135 @@
   --accent: #38bdf8;
 }
 
-body.light { --bg:#f8fafc; --card:#ffffff; --text:#020617; }
-body { background: var(--bg); color: var(--text); transition: 0.3s; }
+body.light {
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #020617;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
 
 header {
-  position: sticky; top: 0; z-index: 100;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 20px 80px; background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: var(--card);
 }
-.logo { color: var(--accent); font-size: 26px; font-weight: bold; }
-nav a { margin-left: 30px; text-decoration: none; color: var(--text); }
-nav a:hover { color: var(--accent); }
-.toggle { cursor: pointer; margin-left: 30px; }
 
-section { max-width: 1600px; margin: auto; padding: 100px 80px; }
-.hero { display: flex; gap: 60px; align-items: center; justify-content: space-between; }
-.hero img { width: 380px; border-radius: 25px; }
+.logo {
+  color: var(--accent);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.toggle {
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 100px 80px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-buttons a {
+  padding: 14px 26px;
+  background: var(--accent);
+  color: #020617;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.hero-buttons a.outline {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
 
 h1 { font-size: 48px; }
 h2 { font-size: 36px; color: var(--accent); margin-bottom: 20px; }
-p { line-height: 1.7; max-width: 650px; }
 
-.services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-.card { background: var(--card); padding: 30px; border-radius: 18px; }
+p {
+  line-height: 1.7;
+  max-width: 650px;
+}
 
-.fade { opacity: 0; transform: translateY(40px); transition: 1s ease; }
-.fade.show { opacity: 1; transform: translateY(0); }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
 
-/* CONTACT FORM */
+.card {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CONTACT */
 form {
   max-width: 500px;
   background: var(--card);
   padding: 30px;
   border-radius: 18px;
 }
-form input, form textarea {
+
+form input,
+form textarea {
   width: 100%;
   padding: 14px;
   margin-bottom: 15px;
   border-radius: 10px;
   border: none;
 }
+
 form button {
   padding: 14px;
   width: 100%;
@@ -66,12 +160,21 @@ form button {
   font-weight: bold;
   cursor: pointer;
 }
-#form-response { margin-top: 15px; }
+
+#form-response {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  opacity: 0.7;
+}
 
 @media (max-width: 900px) {
   header { padding: 20px 30px; }
   section { padding: 70px 30px; }
-  .hero { flex-direction: column; text-align: center; }
 }
 </style>
 </head>
@@ -89,9 +192,12 @@ form button {
 </header>
 
 <section id="home" class="hero fade">
-  <div>
-    <h1>Hello, I’m <span style="color:#38bdf8;">Bravin Mulati</span></h1>
-    <p>Building digital solutions that connect ideas, people, and innovation.</p>
+  <h1>Hello, I’m <span style="color:#38bdf8;">Bravin Mulati</span></h1>
+  <p>Building scalable digital solutions that connect ideas, people, and innovation.</p>
+
+  <div class="hero-buttons">
+    <a href="#contact">Hire Me</a>
+    <a href="#services" class="outline">View Services</a>
   </div>
 </section>
 
@@ -100,7 +206,7 @@ form button {
   <div class="services">
     <div class="card">🌐 Web Development</div>
     <div class="card">💻 Software Design</div>
-    <div class="card">🚀 Project Execution</div>
+    <div class="card">🚀 Backend & Deployment</div>
   </div>
 </section>
 
@@ -121,8 +227,9 @@ form button {
 </footer>
 
 <script>
-/* Animations */
+/* Scroll animation */
 const elements = document.querySelectorAll('.fade');
+
 const showOnScroll = () => {
   elements.forEach(el => {
     if (el.getBoundingClientRect().top < window.innerHeight - 100) {
@@ -130,41 +237,48 @@ const showOnScroll = () => {
     }
   });
 };
+
 window.addEventListener('scroll', showOnScroll);
 window.onload = showOnScroll;
 
+/* Dark / Light */
 function toggleMode() {
   document.body.classList.toggle('light');
 }
 
-/* CONTACT FORM BACKEND CONNECTION */
+/* CONTACT FORM */
+const API_URL = "http://localhost:3000/contact"; // change when deploying
+
 const form = document.getElementById("contactForm");
 const responseMsg = document.getElementById("form-response");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  responseMsg.textContent = "Sending...";
 
   try {
-    const res = await fetch("http://localhost:3000/contact", {
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, message })
+      body: JSON.stringify({
+        name: name.value,
+        email: email.value,
+        message: message.value
+      })
     });
 
     const data = await res.json();
 
     if (data.success) {
+      responseMsg.style.color = "lime";
       responseMsg.textContent = "✅ Message sent successfully!";
       form.reset();
     } else {
-      responseMsg.textContent = "❌ Failed to send message.";
+      throw new Error();
     }
   } catch {
-    responseMsg.textContent = "⚠️ Server not reachable.";
+    responseMsg.style.color = "red";
+    responseMsg.textContent = "⚠️ Unable to send message.";
   }
 });
 </script>
